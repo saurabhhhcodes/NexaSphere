@@ -52,7 +52,7 @@ async function _rawMembershipFetch(scriptUrl, secret) {
   const response = await fetch(scriptUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ action: 'getResponses', token: secret }),
+    body: JSON.stringify({ action: 'getResponses', apiKey: secret, token: secret }),
   });
   if (!response.ok) {
     throw new Error(`Google Apps Script returned ${response.status}`);

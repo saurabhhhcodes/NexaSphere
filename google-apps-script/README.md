@@ -58,3 +58,5 @@ fetch(url, {
 ```
 
 The script receives the raw text in `e.postData.contents` and parses it as JSON. The response is opaque (no response body visible to the browser) — this is expected and correct behaviour.
+
+For admin reads, the shared secret is accepted as an `apiKey` field in the POST body, with `token` kept as a backward-compatible fallback.

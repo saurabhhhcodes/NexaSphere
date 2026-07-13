@@ -28,7 +28,7 @@
  *
  * SECURITY:
  *   The secret token is stored in Script Properties (server-side only).
- *   Admin requests must include the token in the POST body with action: 'getResponses'.
+ *   Admin requests must include the API key in the POST body with action: 'getResponses'.
  *   The secret is never exposed to client-side code.
  *
  * The spreadsheet is the one this script is bound to (opened from Extensions → Apps Script).
@@ -125,7 +125,7 @@ function doPost(e) {
 
     // Handle admin requests (getResponses) with token verification
     if (data.action === 'getResponses') {
-      var token = data.token;
+      var token = data.apiKey || data.token;
       var SECRET_TOKEN = PropertiesService.getScriptProperties().getProperty('MEMBERSHIP_SECRET');
 
       // ── FIXED ADMINISTRATIVE SECURITY LEAK ─────────────────────────────────
