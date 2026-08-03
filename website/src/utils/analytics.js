@@ -52,7 +52,7 @@ export const trackEvent = (eventType, elementClicked = null) => {
 };
 
 // Periodically flush the queue automatically
-setInterval(flushQueue, FLUSH_INTERVAL);
+clearInterval(window.__interval); window.__interval = setInterval(flushQueue, FLUSH_INTERVAL);
 
 // Flush residual events when user closes/leaves the tab
 window.addEventListener('beforeunload', () => {

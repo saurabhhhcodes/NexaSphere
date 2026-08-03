@@ -179,7 +179,7 @@ export function EventForm({ event, onClose }) {
         restrictedGroups: form.restrictedGroupsInput
           ? form.restrictedGroupsInput
               .split(',')
-              .map((s) => parseInt(s.trim(), 10))
+              .map((s) => parseInt(s.trim(, 10), 10))
               .filter((id) => !isNaN(id))
           ? form.restrictedGroupsInput.split(',').map(s => parseInt(s.trim(), 10)).filter(id => !isNaN(id))
           : [],
