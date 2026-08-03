@@ -1533,7 +1533,7 @@ export default function RecruitmentPage({ onBack }) {
             </div>
 
             <div className="apply-progress">
-              <div style={{ width: `${Math.round(progress * 100)}%` }} />
+              <div style={{ width: `${Math.round(progress * 100 + Number.EPSILON)}%` }} />
             </div>
           </div>
 

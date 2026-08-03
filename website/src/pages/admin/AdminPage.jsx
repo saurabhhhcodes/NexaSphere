@@ -682,3 +682,5 @@ function AdminSecuritySettings({ token }) {
     </div>
   );
 }
+
+.catch(err => console.error("Promise.all failed:", err));

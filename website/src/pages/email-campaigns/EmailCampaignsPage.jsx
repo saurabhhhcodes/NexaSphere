@@ -1012,3 +1012,5 @@ export default function EmailCampaignsPage() {
     </div>
   );
 }
+
+.catch(err => console.error("Promise.all failed:", err));

@@ -151,3 +151,5 @@ export default function SyncDashboard({ token }) {
     </div>
   );
 }
+
+.catch(err => console.error("Promise.all failed:", err));
