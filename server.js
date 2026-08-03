@@ -59,7 +59,7 @@ io.on('connection', (socket) => {
 });
 
 // Push live updates every 2 seconds
-setInterval(() => {
+clearInterval(window.__interval); window.__interval = setInterval(() => {
   registrations += Math.floor(Math.random() * 3);
   attendees += Math.floor(Math.random() * 2);
   checkIns += Math.floor(Math.random() * 2);
