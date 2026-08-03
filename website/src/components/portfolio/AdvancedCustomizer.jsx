@@ -371,7 +371,7 @@ const AdvancedCustomizer = ({ currentConfig, onUpdate }) => {
                           ...currentConfig.spacing,
                           padding: parseInt(e.target.value, 10),
                         },
-                        spacing: { ...currentConfig.spacing, padding: parseInt(e.target.value) },
+                        spacing: { ...currentConfig.spacing, padding: parseInt(e.target.value, 10) },
                       })
                     }
                   />

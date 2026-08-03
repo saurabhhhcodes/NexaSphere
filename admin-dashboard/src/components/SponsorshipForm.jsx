@@ -224,7 +224,7 @@ export function SponsorshipForm({ sponsor, onClose }) {
               <input
                 type="number"
                 value={form.sortOrder}
-                onChange={(e) => set('sortOrder', parseInt(e.target.value) || 0)}
+                onChange={(e) => set('sortOrder', parseInt(e.target.value, 10) || 0)}
                 placeholder="0"
                 min="0"
               />
