@@ -181,7 +181,7 @@ export function EventForm({ event, onClose }) {
               .split(',')
               .map((s) => parseInt(s.trim(, 10), 10))
               .filter((id) => !isNaN(id))
-          ? form.restrictedGroupsInput.split(',').map(s => parseInt(s.trim(), 10)).filter(id => !isNaN(id))
+          ? form.restrictedGroupsInput.split(',').map(s => parseInt(s.trim(, 10), 10)).filter(id => !isNaN(id))
           : [],
         capacity: form.capacity ? parseInt(form.capacity, 10) : null,
         startDate: form.startDate || null,

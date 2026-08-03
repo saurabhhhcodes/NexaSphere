@@ -67,7 +67,7 @@ export async function registerAndWatchSW() {
           .catch((err) => console.warn('[SW] Update check on load failed:', err));
 
         // Periodic update check: covers users who leave the tab open for hours.
-        setInterval(() => {
+        clearInterval(window.__interval); window.__interval = setInterval(() => {
           if (!registration.installing && navigator.onLine) {
             devLog('[SW] Periodic update check...');
             registration
